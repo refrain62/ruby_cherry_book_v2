@@ -23,4 +23,3 @@ class FizzBuzzTest < Test::Unit::TestCase
         # 省略
     end
 end
-
