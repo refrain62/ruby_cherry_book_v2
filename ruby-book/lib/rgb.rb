@@ -8,9 +8,7 @@ def to_hex( r, g, b )
 end
 
 def to_ints( hex )
-    # 引数の文字列から3つの16進数を取り出す
-    r, g, b = hex.scan(/\w\w/)
-    [ r, g, b ].map do |s|
+    hex.scan(/\w\w/).map do |s|
         s.hex
     end
 end
