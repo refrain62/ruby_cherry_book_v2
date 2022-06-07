@@ -1,4 +1,5 @@
 def convert_hash_syntax( old_syntax )
-    # 何も変換しない
-    old_syntax
+    old_syntax.gsub(/:(\w+) *=> */) do
+        "#{$1}: "
+    end
 end
