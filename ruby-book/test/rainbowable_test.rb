@@ -3,9 +3,8 @@ require_relative '../lib/rainbowable'
 
 class RainbowableTest < Minitest::Test 
     def setup 
-        # 文字列や配列でrainbowメソッドが呼び出せるよう、Rainbowableモジュールをinclude
-        String.include Rainbowable
-        Array.include Rainbowable
+        # StringクラスやArrayクラスではなく、ObjectクラスにRainbowableモジュールをinclude
+        Object.include Rainbowable
     end 
 
     def test_rainbow 
@@ -18,6 +17,12 @@ class RainbowableTest < Minitest::Test
         # rainbowメソッドの戻り値をターミナルに出力
         puts 'Hello, world!'.rainbow 
         puts [1, 2, 3].rainbow 
+
+        # ハッシュや範囲オブジェクトなど、任意のオブジェクトに対してrainbowメソッドを呼び出してみる
+        puts( {foo: 123, bar: 456}.rainbow )
+        puts (10..20).rainbow
+        puts true.rainbow
+        puts false.rainbow
     end 
 end 
 
