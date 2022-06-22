@@ -1,0 +1,8 @@
+# typeprof .\test\fizz_buzz_test.rb -o sig/fizz_buzz.rbs で自動作成
+
+# TypeProf 0.21.2
+
+# Classes
+class FizzBuzzTest
+  def test_fizz_buzz: -> untyped
+end
